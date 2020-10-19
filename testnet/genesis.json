@@ -28,7 +28,7 @@
         "max_validators": 100,
         "max_entries": 7,
         "historical_entries": 0,
-        "bond_denom": "stake"
+        "bond_denom": "tRowan"
       },
       "last_total_power": "0",
       "last_validator_powers": null,
@@ -68,7 +68,7 @@
                   "validator_address": "sifvaloper1q2r83cpgprd6jfumm2ghng03rakslscq2x2yyx",
                   "pubkey": "sifvalconspub1zcjduepqe6s0zyrmer6d94gh7cu02fr7u3e3n2n27atrr7dcmh0p9tg2je5s07hug4",
                   "value": {
-                    "denom": "stake",
+                    "denom": "tRowan",
                     "amount": "100000000"
                   }
                 }
@@ -107,11 +107,11 @@
             "address": "sif1q2r83cpgprd6jfumm2ghng03rakslscqryzwyk",
             "coins": [
               {
-                "denom": "rowan",
+                "denom": "tRowan",
                 "amount": "1000000000000"
               },
               {
-                "denom": "stake",
+                "denom": "tRowan",
                 "amount": "1000000000000000"
               }
             ],
