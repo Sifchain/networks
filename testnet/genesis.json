@@ -1,5 +1,5 @@
 {
-  "genesis_time": "2020-10-19T06:18:27.776788Z",
+  "genesis_time": "2020-10-21T04:29:35.722793Z",
   "chain_id": "Sifchain-testnet",
   "consensus_params": {
     "block": {
@@ -19,9 +19,6 @@
   },
   "app_hash": "",
   "app_state": {
-    "bank": {
-      "send_enabled": true
-    },
     "staking": {
       "params": {
         "unbonding_time": "1814400000000000",
@@ -52,7 +49,7 @@
                 "type": "cosmos-sdk/MsgCreateValidator",
                 "value": {
                   "description": {
-                    "moniker": "withered-night",
+                    "moniker": "damp-resonance",
                     "identity": "",
                     "website": "",
                     "security_contact": "",
@@ -64,9 +61,9 @@
                     "max_change_rate": "0.010000000000000000"
                   },
                   "min_self_delegation": "1",
-                  "delegator_address": "sif1q2r83cpgprd6jfumm2ghng03rakslscqryzwyk",
-                  "validator_address": "sifvaloper1q2r83cpgprd6jfumm2ghng03rakslscq2x2yyx",
-                  "pubkey": "sifvalconspub1zcjduepqe6s0zyrmer6d94gh7cu02fr7u3e3n2n27atrr7dcmh0p9tg2je5s07hug4",
+                  "delegator_address": "sif1g2ec2z9pfe0tmdny32fjlsvqqvpmk0vhq3t8gu",
+                  "validator_address": "sifvaloper1g2ec2z9pfe0tmdny32fjlsvqqvpmk0vhfnrdgv",
+                  "pubkey": "sifvalconspub1zcjduepqgm9h5px6kwhr3xkg3ra5fk8rq9np69hst66q2w6mmz3p5jlwjecspjfp2p",
                   "value": {
                     "denom": "stake",
                     "amount": "100000000"
@@ -82,12 +79,12 @@
               {
                 "pub_key": {
                   "type": "tendermint/PubKeySecp256k1",
-                  "value": "A2ZHVMuJBf85Jv1ylkGMD3/YAkMN0V3FEPeDmUqokkpI"
+                  "value": "Ak9tIjJ9MMurIrUm3XGjxOKbP8xRuMJNl07DypsFcw/r"
                 },
-                "signature": "ljGqYvDVIFvDA8EWFe7cipsNTNw3sBsczKijKNfb5lMog+dmr+Ck5r7wmEU/VVPYudA2pmC1FIl2v0vUpcIn4w=="
+                "signature": "t8Dv3i5OCwxzYyXaCt4N/EGDmKu6hi2LoHbE8frKyQJjsld7JP/74TiwuqQ/gOvh436/5m6Z556Vyqp3ysDHAg=="
               }
             ],
-            "memo": "cf2a1e33e2a52190a28ad4694734acca0ead2461@10.0.22.27:26656"
+            "memo": "3dac57af9442bfe42b5512440fba307ff08ae0de@10.0.22.27:26656"
           }
         }
       ]
@@ -104,15 +101,15 @@
         {
           "type": "cosmos-sdk/Account",
           "value": {
-            "address": "sif1q2r83cpgprd6jfumm2ghng03rakslscqryzwyk",
+            "address": "sif1g2ec2z9pfe0tmdny32fjlsvqqvpmk0vhq3t8gu",
             "coins": [
-              {
-                "denom": "rowan",
-                "amount": "1000000000000"
-              },
               {
                 "denom": "stake",
                 "amount": "1000000000000000"
+              },
+              {
+                "denom": "trowan",
+                "amount": "1000000000000000000"
               }
             ],
             "public_key": null,
@@ -121,7 +118,9 @@
           }
         }
       ]
+    },
+    "bank": {
+      "send_enabled": true
     }
   }
 }
-
