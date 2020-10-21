@@ -1,6 +1,6 @@
 {
-  "genesis_time": "2020-10-21T05:55:35.753386Z",
-  "chain_id": "Sifchain-test-fu",
+  "genesis_time": "2020-10-21T05:59:11.844747Z",
+  "chain_id": "Sifchain-Testnet",
   "consensus_params": {
     "block": {
       "max_bytes": "22020096",
@@ -19,86 +19,6 @@
   },
   "app_hash": "",
   "app_state": {
-    "params": null,
-    "supply": {
-      "supply": []
-    },
-    "genutil": {
-      "gentxs": [
-        {
-          "type": "cosmos-sdk/StdTx",
-          "value": {
-            "msg": [
-              {
-                "type": "cosmos-sdk/MsgCreateValidator",
-                "value": {
-                  "description": {
-                    "moniker": "frosty-grass",
-                    "identity": "",
-                    "website": "",
-                    "security_contact": "",
-                    "details": ""
-                  },
-                  "commission": {
-                    "rate": "0.100000000000000000",
-                    "max_rate": "0.200000000000000000",
-                    "max_change_rate": "0.010000000000000000"
-                  },
-                  "min_self_delegation": "1",
-                  "delegator_address": "sif1d89fefpsttqc6cq350xz7q6u6649sd36telvew",
-                  "validator_address": "sifvaloper1d89fefpsttqc6cq350xz7q6u6649sd36zmhxe7",
-                  "pubkey": "sifvalconspub1zcjduepqkxl5kvkkxrjxm79gdm47d7pcjt5aefcu5fs7qtahua2wz2nnmj9szur3vc",
-                  "value": {
-                    "denom": "trowan",
-                    "amount": "100000000"
-                  }
-                }
-              }
-            ],
-            "fee": {
-              "amount": [],
-              "gas": "200000"
-            },
-            "signatures": [
-              {
-                "pub_key": {
-                  "type": "tendermint/PubKeySecp256k1",
-                  "value": "AoNeFfH/1gv4sucW3st9jjEKq1bfB4CIddqgGXmJd6Pj"
-                },
-                "signature": "VuJjPijkw3YtWn5lWM2ml+B8FvcliUXcqIpQ87AQslEXzRf46lTycJH3LiqtsIcz4v5kM0xy9T8TqR25Mxm6AQ=="
-              }
-            ],
-            "memo": "697d892324518a2fa09f5596f1e2f24ddf7fdfab@10.0.22.27:26656"
-          }
-        }
-      ]
-    },
-    "auth": {
-      "params": {
-        "max_memo_characters": "256",
-        "tx_sig_limit": "7",
-        "tx_size_cost_per_byte": "10",
-        "sig_verify_cost_ed25519": "590",
-        "sig_verify_cost_secp256k1": "1000"
-      },
-      "accounts": [
-        {
-          "type": "cosmos-sdk/Account",
-          "value": {
-            "address": "sif1d89fefpsttqc6cq350xz7q6u6649sd36telvew",
-            "coins": [
-              {
-                "denom": "trowan",
-                "amount": "1000000000000000000000"
-              }
-            ],
-            "public_key": null,
-            "account_number": "0",
-            "sequence": "0"
-          }
-        }
-      ]
-    },
     "bank": {
       "send_enabled": true
     },
@@ -117,6 +37,86 @@
       "unbonding_delegations": null,
       "redelegations": null,
       "exported": false
+    },
+    "params": null,
+    "supply": {
+      "supply": []
+    },
+    "genutil": {
+      "gentxs": [
+        {
+          "type": "cosmos-sdk/StdTx",
+          "value": {
+            "msg": [
+              {
+                "type": "cosmos-sdk/MsgCreateValidator",
+                "value": {
+                  "description": {
+                    "moniker": "proud-feather",
+                    "identity": "",
+                    "website": "",
+                    "security_contact": "",
+                    "details": ""
+                  },
+                  "commission": {
+                    "rate": "0.100000000000000000",
+                    "max_rate": "0.200000000000000000",
+                    "max_change_rate": "0.010000000000000000"
+                  },
+                  "min_self_delegation": "1",
+                  "delegator_address": "sif1fkrz3uf35xufv3usaldslpg77fvx05gedjz0lx",
+                  "validator_address": "sifvaloper1fkrz3uf35xufv3usaldslpg77fvx05geys29lk",
+                  "pubkey": "sifvalconspub1zcjduepqaxesa4grfh5m3zv00ad4hh4wh3mt4alxw0qpl6wtp8l5797pyr9q0t2vf4",
+                  "value": {
+                    "denom": "trowan",
+                    "amount": "100000000"
+                  }
+                }
+              }
+            ],
+            "fee": {
+              "amount": [],
+              "gas": "200000"
+            },
+            "signatures": [
+              {
+                "pub_key": {
+                  "type": "tendermint/PubKeySecp256k1",
+                  "value": "AqXkX9/Ks9oj/jUbl+vm4cSUT4xvsf5iDpRLTVwd91uS"
+                },
+                "signature": "p3QVccDayVoBMAGq9pLYzBuFOxTi3z9ItID70KjUPj1EGJQB1sJQbJnnNAhpPU3EBI7GZFkco7JIkner/gIZwQ=="
+              }
+            ],
+            "memo": "4ac529165642319e748742e97f093b8d50aea8a1@10.0.22.27:26656"
+          }
+        }
+      ]
+    },
+    "auth": {
+      "params": {
+        "max_memo_characters": "256",
+        "tx_sig_limit": "7",
+        "tx_size_cost_per_byte": "10",
+        "sig_verify_cost_ed25519": "590",
+        "sig_verify_cost_secp256k1": "1000"
+      },
+      "accounts": [
+        {
+          "type": "cosmos-sdk/Account",
+          "value": {
+            "address": "sif1fkrz3uf35xufv3usaldslpg77fvx05gedjz0lx",
+            "coins": [
+              {
+                "denom": "trowan",
+                "amount": "1000000000000000000000"
+              }
+            ],
+            "public_key": null,
+            "account_number": "0",
+            "sequence": "0"
+          }
+        }
+      ]
     }
   }
 }
