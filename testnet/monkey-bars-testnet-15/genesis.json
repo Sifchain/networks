@@ -3,7 +3,7 @@
   "id": -1,
   "result": {
     "genesis": {
-      "genesis_time": "2020-11-30T05:44:50.132566331Z",
+      "genesis_time": "2020-11-30T07:32:45.925892186Z",
       "chain_id": "monkey-bars-15",
       "consensus_params": {
         "block": {
@@ -63,11 +63,11 @@
                     "type": "cosmos-sdk/MsgCreateValidator",
                     "value": {
                       "description": {
-                        "moniker": "black-shape",
+                        "moniker": "throbbing-silence",
                         "identity": "",
                         "website": "",
                         "security_contact": "",
-                        "details": "black-shape"
+                        "details": "throbbing-silence"
                       },
                       "commission": {
                         "rate": "0.100000000000000000",
@@ -77,7 +77,7 @@
                       "min_self_delegation": "1",
                       "delegator_address": "sif1k7g86paw54krw8ha04q7j2k88qywtfhhzcr99g",
                       "validator_address": "sifvaloper1k7g86paw54krw8ha04q7j2k88qywtfhht6t09c",
-                      "pubkey": "sifvalconspub1zcjduepqlze88gsf09fx2wp86mrxvzycvx8wqvjhtad3tz3ku4j8znwk06escww6km",
+                      "pubkey": "sifvalconspub1zcjduepqgg8fctxz7l0pvq2psrtu4hum4efjlv4ewt48889l875lle55h20qhzl6fu",
                       "value": {
                         "denom": "rowan",
                         "amount": "5000000000"
@@ -95,10 +95,10 @@
                       "type": "tendermint/PubKeySecp256k1",
                       "value": "A6xN1/AuumzvcRFR3MUTSm1ATQJ4VNh2mer1D4Pxqf56"
                     },
-                    "signature": "Q6amCkdKAyhgQz2OwB8fVPfyGbOr9/59TMzGUO5BHokPWFTfKazhow8gJpL58hkO176p22CTHjejYv++jFyHag=="
+                    "signature": "IwTCcL4yiKfnAhxaI6HadymJ8z0Gx3Su+RD3shQ0sf4DiYrCRAvC62XrWhMOnf3u0sJ14dkac2/95Hqz7Yz+Iw=="
                   }
                 ],
-                "memo": "571e513ef8e84692c786e5c531dae35de57fe284@127.0.0.1:26656"
+                "memo": "1e2b238c1086d5988fb1f82d27417ef9418e9667@127.0.0.1:26656"
               }
             }
           ]
