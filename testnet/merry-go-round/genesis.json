@@ -1,5 +1,5 @@
 {
-  "genesis_time": "2020-12-22T22:47:52.054467377Z",
+  "genesis_time": "2020-12-22T23:44:19.532958109Z",
   "chain_id": "merry-go-round",
   "consensus_params": {
     "block": {
@@ -37,6 +37,36 @@
       "unbonding_delegations": null,
       "redelegations": null,
       "exported": false
+    },
+    "slashing": {
+      "params": {
+        "signed_blocks_window": "100",
+        "min_signed_per_window": "0.500000000000000000",
+        "downtime_jail_duration": "600000000000",
+        "slash_fraction_double_sign": "0.050000000000000000",
+        "slash_fraction_downtime": "0.010000000000000000"
+      },
+      "signing_infos": {},
+      "missed_blocks": {}
+    },
+    "distribution": {
+      "params": {
+        "community_tax": "0.020000000000000000",
+        "base_proposer_reward": "0.010000000000000000",
+        "bonus_proposer_reward": "0.040000000000000000",
+        "withdraw_addr_enabled": true
+      },
+      "fee_pool": {
+        "community_pool": []
+      },
+      "delegator_withdraw_infos": [],
+      "previous_proposer": "",
+      "outstanding_rewards": [],
+      "validator_accumulated_commissions": [],
+      "validator_historical_rewards": [],
+      "validator_current_rewards": [],
+      "delegator_starting_infos": [],
+      "validator_slash_events": []
     },
     "params": null,
     "supply": {
@@ -76,7 +106,7 @@
                   "min_self_delegation": "1",
                   "delegator_address": "sif1vmtp5ul2uzmtvhchpftpzm0t49nk0hhaeyuqzl",
                   "validator_address": "sifvaloper1vmtp5ul2uzmtvhchpftpzm0t49nk0hhasx52z0",
-                  "pubkey": "sifvalconspub1zcjduepqe4ddf985za6ffdme07xeu7zp8svkw6lf4pygq6dg856eu76gfxeskzpmqh",
+                  "pubkey": "sifvalconspub1zcjduepqgeau6hn4q0v3nt2agnc65yceg42dsjedcqa0d3ehe9zcvw2lpadswvf6vf",
                   "value": {
                     "denom": "rowan",
                     "amount": "5000000000"
@@ -94,10 +124,10 @@
                   "type": "tendermint/PubKeySecp256k1",
                   "value": "AtbagR7JncijN1FM27AU9KF/jDOZ2VTPMWcykDQALV5B"
                 },
-                "signature": "872KG+IxXCBRhXfNkMqW8AUwk8bNMUjjtMarbybxs1gpx1OUKbsLhcnv0WTeLOjTb7RWUH8nbMlkl9EQFVPrgA=="
+                "signature": "G8gL6FUrGzjI5W2vg61SLLyQGuyEpPNUSHgdutD9DlJ3torZ8N6l6W9dRCGu7CnrD0x0N5BDSB9p2fLtOJPNNA=="
               }
             ],
-            "memo": "53b13d8391031f39f846c920762f322e5dde6af1@127.0.0.1:26656"
+            "memo": "32789411cfb76bf5cf5bbe2ee78bb7cf64085805@127.0.0.1:26656"
           }
         }
       ]
