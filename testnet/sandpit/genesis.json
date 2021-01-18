@@ -1,5 +1,5 @@
 {
-  "genesis_time": "2021-01-17T21:16:12.568642631Z",
+  "genesis_time": "2021-01-18T21:24:48.990674374Z",
   "chain_id": "sandpit",
   "consensus_params": {
     "block": {
@@ -83,10 +83,10 @@
                   "min_self_delegation": "1",
                   "delegator_address": "sif1d0q6q6afvzk3whu6cy338yth64vau78r43fsuh",
                   "validator_address": "sifvaloper1d0q6q6afvzk3whu6cy338yth64vau78runp6u8",
-                  "pubkey": "sifvalconspub1zcjduepqrtmugvslwxf95gaz34z640fhxrdwhj5fe5th5w7gr0rmtrrq9wnsup59t8",
+                  "pubkey": "sifvalconspub1zcjduepqs37ks3vusjrkqulwjlsgx0kkk5nds3vns0ud35y4jz7zq9535hsswe2t0h",
                   "value": {
                     "denom": "rowan",
-                    "amount": "100000000000000"
+                    "amount": "1000000000000000000000000"
                   }
                 }
               }
@@ -101,10 +101,10 @@
                   "type": "tendermint/PubKeySecp256k1",
                   "value": "A3DmgIq1k/Xbdqne9HZF1ff1BHl6jkT/iDKBjXr1y1Re"
                 },
-                "signature": "Q/9aLnxChAzhHGywP/1LytOUuE/AwSS9mVgGocyBWfZqEkEtfPyFW47ixcQFbZOmaOAPLC7pXtyNAgGrJImXXg=="
+                "signature": "Ke19YFybRBu9whXP/xPczc15cDWWfsVtqviNzyeCcCoQ9ZcXrskmACUB0S/+77zIE2gG75yb/ztHLHlolPDUAA=="
               }
             ],
-            "memo": "75ec613c5f0a50011cf881ffea9af7f80a24388a@52.27.20.89:26656"
+            "memo": "f85b17df28444351b4d87194c727f1532cade78d@50.112.188.177:26656"
           }
         }
       ]
@@ -148,7 +148,22 @@
             "coins": [
               {
                 "denom": "rowan",
-                "amount": "99900000000000000"
+                "amount": "999000000000000000000000000"
+              }
+            ],
+            "public_key": null,
+            "account_number": "0",
+            "sequence": "0"
+          }
+        },
+        {
+          "type": "cosmos-sdk/Account",
+          "value": {
+            "address": "sif17s95c5jpc6x2l3edwh4dm8yhac68yru7a7kr3x",
+            "coins": [
+              {
+                "denom": "rowan",
+                "amount": "1000000000000000000000000"
               }
             ],
             "public_key": null,
