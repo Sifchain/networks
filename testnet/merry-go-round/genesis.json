@@ -1,5 +1,5 @@
 {
-  "genesis_time": "2021-01-19T02:43:47.604164247Z",
+  "genesis_time": "2021-01-19T07:00:33.835083472Z",
   "chain_id": "merry-go-round",
   "consensus_params": {
     "block": {
@@ -83,7 +83,7 @@
                   "min_self_delegation": "1",
                   "delegator_address": "sif1vmtp5ul2uzmtvhchpftpzm0t49nk0hhaeyuqzl",
                   "validator_address": "sifvaloper1vmtp5ul2uzmtvhchpftpzm0t49nk0hhasx52z0",
-                  "pubkey": "sifvalconspub1zcjduepqg5gwfe0eymzu8zqkuyhkqvfjqyd4d6rslm5qx3guxmj8jzjhrzzqwnu444",
+                  "pubkey": "sifvalconspub1zcjduepqk8yrxfvg432qnq489s5pdnq5vg9v4459ewplek6vcmrcl2fp9h3qgha6qw",
                   "value": {
                     "denom": "rowan",
                     "amount": "1000000000000000000000000"
@@ -101,10 +101,10 @@
                   "type": "tendermint/PubKeySecp256k1",
                   "value": "AtbagR7JncijN1FM27AU9KF/jDOZ2VTPMWcykDQALV5B"
                 },
-                "signature": "NxfVOj5SgHoKsdxlLxTJ5e4u1TRDHDcWtXYutomE6n8/UIacGJxQi6J1wltPzPbaQEWE1G/i7tHvO0j8KGYA1g=="
+                "signature": "povJ8dT2QkdtNx/3zV/dkMRB9FPcPb+CgIQxYFhO8D0TU1oTQvr5rT5KPJRCK9Cbv9wl0FpQzWEoTRjpv2zr4w=="
               }
             ],
-            "memo": "a00c8a5f07d87754e9a2d428ad7e1877dbe12ddd@35.165.17.164:26656"
+            "memo": "a75d98a0195596ce7043f7fe14a5498df6279bd3@34.212.71.53:26656"
           }
         }
       ]
