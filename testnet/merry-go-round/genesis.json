@@ -1,6 +1,6 @@
 {
-  "genesis_time": "2021-01-19T08:21:56.976142323Z",
-  "chain_id": "sandpit",
+  "genesis_time": "2021-01-26T02:36:01.175135654Z",
+  "chain_id": "merry-go-round",
   "consensus_params": {
     "block": {
       "max_bytes": "22020096",
@@ -48,8 +48,8 @@
         "min_create_pool_threshold": "100"
       },
       "address_whitelist": [
-        "sif1mxv2xmhm9r25cdxpwp4n43fd98t8xz97mg6xyt",
-        "sif1rkl3p87fanf8srn44lp9xrxx8smtux4mfjhwf2"
+        "sif1hnehvypx7f4e9ddtkhtss5uksnp5sku2g7rerq",
+        "sif1xfmzzr6q6hxvyh3elhjpdcl0fexluspkqx2x2p"
       ],
       "pool_list": null,
       "liquidity_provider_list": null
@@ -57,7 +57,7 @@
     "upgrade": {},
     "oracle": {
       "address_whitelist": null,
-      "admin_address": "sif1mxv2xmhm9r25cdxpwp4n43fd98t8xz97mg6xyt"
+      "admin_address": "sif1hnehvypx7f4e9ddtkhtss5uksnp5sku2g7rerq"
     },
     "genutil": {
       "gentxs": [
@@ -69,11 +69,11 @@
                 "type": "cosmos-sdk/MsgCreateValidator",
                 "value": {
                   "description": {
-                    "moniker": "sandpit-1",
+                    "moniker": "merry-go-round-1",
                     "identity": "",
                     "website": "",
                     "security_contact": "",
-                    "details": "sandpit-1"
+                    "details": "merry-go-round-1"
                   },
                   "commission": {
                     "rate": "0.100000000000000000",
@@ -81,9 +81,9 @@
                     "max_change_rate": "0.010000000000000000"
                   },
                   "min_self_delegation": "1",
-                  "delegator_address": "sif1d0q6q6afvzk3whu6cy338yth64vau78r43fsuh",
-                  "validator_address": "sifvaloper1d0q6q6afvzk3whu6cy338yth64vau78runp6u8",
-                  "pubkey": "sifvalconspub1zcjduepqunrl0e4pwglhddzfkl6fysg6v4tugzceu6y22uue964wnyazkh9qsq5rht",
+                  "delegator_address": "sif1vmtp5ul2uzmtvhchpftpzm0t49nk0hhaeyuqzl",
+                  "validator_address": "sifvaloper1vmtp5ul2uzmtvhchpftpzm0t49nk0hhasx52z0",
+                  "pubkey": "sifvalconspub1zcjduepq69qwgexfxxfh9jtp4nu0jrvf4hq8m9k4079z995ss0qx0qp5qd7sln7cm2",
                   "value": {
                     "denom": "rowan",
                     "amount": "1000000000000000000000000"
@@ -99,12 +99,12 @@
               {
                 "pub_key": {
                   "type": "tendermint/PubKeySecp256k1",
-                  "value": "A3DmgIq1k/Xbdqne9HZF1ff1BHl6jkT/iDKBjXr1y1Re"
+                  "value": "AtbagR7JncijN1FM27AU9KF/jDOZ2VTPMWcykDQALV5B"
                 },
-                "signature": "mO/8QbJyZfZMMYaTH1W/XwQYdsxdNEeqfqGhXy3jLJNtGWLhrYCYgHd/xYSobVhuvEOpHlCs3ogjLieSlALWOA=="
+                "signature": "CCa9egZSIdMjb20pVp9mcALTM/lJU0R526vSXimvpzMFZQ/PjOtw7c1vXbCAD0iK3BE6ugWOq5F5aYL/Lym/8Q=="
               }
             ],
-            "memo": "b41fe8f649984024d12d501706e026df31aa40f7@35.164.247.11:26656"
+            "memo": "e99deeec54ca1c477f8826801bc1fd29f5539a45@44.226.150.203:26656"
           }
         }
       ]
@@ -117,14 +117,14 @@
       "deposit_params": {
         "min_deposit": [
           {
-            "denom": "stake",
+            "denom": "rowan",
             "amount": "10000000"
           }
         ],
-        "max_deposit_period": "172800000000000"
+        "max_deposit_period": "900000000000"
       },
       "voting_params": {
-        "voting_period": "172800000000000"
+        "voting_period": "900000000000"
       },
       "tally_params": {
         "quorum": "0.334000000000000000",
@@ -144,7 +144,7 @@
         {
           "type": "cosmos-sdk/Account",
           "value": {
-            "address": "sif1d0q6q6afvzk3whu6cy338yth64vau78r43fsuh",
+            "address": "sif1vmtp5ul2uzmtvhchpftpzm0t49nk0hhaeyuqzl",
             "coins": [
               {
                 "denom": "rowan",
