@@ -1,6 +1,6 @@
 {
-  "genesis_time": "2021-01-21T07:44:24.268145221Z",
-  "chain_id": "sandpit",
+  "genesis_time": "2021-02-11T11:59:14.685903388Z",
+  "chain_id": "sifchain",
   "consensus_params": {
     "block": {
       "max_bytes": "22020096",
@@ -48,8 +48,8 @@
         "min_create_pool_threshold": "100"
       },
       "address_whitelist": [
-        "sif1mxv2xmhm9r25cdxpwp4n43fd98t8xz97mg6xyt",
-        "sif1rkl3p87fanf8srn44lp9xrxx8smtux4mfjhwf2"
+        "sif1rl3wcmfk7wuty3jq0am25pzvr0pp68u8kzf5q5",
+        "sif1vl2uwqft8v3263cqfx8d8n333patkypjj7nhvs"
       ],
       "pool_list": null,
       "liquidity_provider_list": null
@@ -57,7 +57,7 @@
     "upgrade": {},
     "oracle": {
       "address_whitelist": null,
-      "admin_address": "sif1mxv2xmhm9r25cdxpwp4n43fd98t8xz97mg6xyt"
+      "admin_address": "sif1wy22rv4w3l9vmw5cvdc6npg8t0vess0kpvga3j"
     },
     "genutil": {
       "gentxs": [
@@ -69,11 +69,11 @@
                 "type": "cosmos-sdk/MsgCreateValidator",
                 "value": {
                   "description": {
-                    "moniker": "sandpit-1",
+                    "moniker": "lisa",
                     "identity": "",
                     "website": "",
                     "security_contact": "",
-                    "details": "sandpit-1"
+                    "details": "lisa"
                   },
                   "commission": {
                     "rate": "0.100000000000000000",
@@ -81,12 +81,12 @@
                     "max_change_rate": "0.010000000000000000"
                   },
                   "min_self_delegation": "1",
-                  "delegator_address": "sif1d0q6q6afvzk3whu6cy338yth64vau78r43fsuh",
-                  "validator_address": "sifvaloper1d0q6q6afvzk3whu6cy338yth64vau78runp6u8",
-                  "pubkey": "sifvalconspub1zcjduepquxu7f0c8wdk6lp2405vvqt4vu3p956s5vag8s7kv3umz3dt2z6dslxugy0",
+                  "delegator_address": "sif1reedn7lzr06smmckgn52mpppca3aeprasfvcf5",
+                  "validator_address": "sifvaloper1reedn7lzr06smmckgn52mpppca3aepraetyjfy",
+                  "pubkey": "sifvalconspub1zcjduepqd3x4ryy8e4wnn6gxzagk3sz355gu725tx0a260xhnaa76pz3whesfyaz6f",
                   "value": {
                     "denom": "rowan",
-                    "amount": "1000000000000000000000000"
+                    "amount": "1000000000000000000000"
                   }
                 }
               }
@@ -99,12 +99,12 @@
               {
                 "pub_key": {
                   "type": "tendermint/PubKeySecp256k1",
-                  "value": "A3DmgIq1k/Xbdqne9HZF1ff1BHl6jkT/iDKBjXr1y1Re"
+                  "value": "A9Pr1Q45bZpHMqnJCzA1LR8r91t8fAOrSmsGdq0+rI5Z"
                 },
-                "signature": "zEgG1JI1mjc7fKqvRm4gl7vf+E9j0JpmTXr3c+22EnAkzEC9OLCK50h4wKfz6bIgwiIWhZ+WthcNiGGUfEdraQ=="
+                "signature": "n7EgEezvtfgt6letH2pCt6LXMlShWW1P/Ti9UAWLwx13EPDJlAOt0I20dXsnM1z7fkqTSeyQoLBYkgicMIcfBg=="
               }
             ],
-            "memo": "0283a6f92a13307242f0e3ddc610ce32123ec9cb@54.218.170.168:26656"
+            "memo": "0d4981bdaf4d5d73bad00af3b1fa9d699e4d3bc0@44.235.108.41:26656"
           }
         }
       ]
@@ -121,10 +121,10 @@
             "amount": "10000000"
           }
         ],
-        "max_deposit_period": "900000000000"
+        "max_deposit_period": "10800000000000"
       },
       "voting_params": {
-        "voting_period": "900000000000"
+        "voting_period": "10800000000000"
       },
       "tally_params": {
         "quorum": "0.334000000000000000",
@@ -144,26 +144,11 @@
         {
           "type": "cosmos-sdk/Account",
           "value": {
-            "address": "sif1d0q6q6afvzk3whu6cy338yth64vau78r43fsuh",
+            "address": "sif1reedn7lzr06smmckgn52mpppca3aeprasfvcf5",
             "coins": [
               {
                 "denom": "rowan",
-                "amount": "999000000000000000000000000"
-              }
-            ],
-            "public_key": null,
-            "account_number": "0",
-            "sequence": "0"
-          }
-        },
-        {
-          "type": "cosmos-sdk/Account",
-          "value": {
-            "address": "sif17s95c5jpc6x2l3edwh4dm8yhac68yru7a7kr3x",
-            "coins": [
-              {
-                "denom": "rowan",
-                "amount": "1000000000000000000000000"
+                "amount": "999999000000000000000000000"
               }
             ],
             "public_key": null,
