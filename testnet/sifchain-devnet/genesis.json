@@ -1,5 +1,5 @@
 {
-  "genesis_time": "2021-03-31T03:49:06.622330053Z",
+  "genesis_time": "2021-04-15T06:32:14.610144961Z",
   "chain_id": "sifchain-devnet",
   "consensus_params": {
     "block": {
@@ -84,7 +84,7 @@
                   "min_self_delegation": "1",
                   "delegator_address": "sif1d0q6q6afvzk3whu6cy338yth64vau78r43fsuh",
                   "validator_address": "sifvaloper1d0q6q6afvzk3whu6cy338yth64vau78runp6u8",
-                  "pubkey": "sifvalconspub1zcjduepqutyvh2pnla7n4q2036xaq457tphjrdymdlhvacefgh3l2cgh6ygqvjdhrj",
+                  "pubkey": "sifvalconspub1zcjduepqnkr5fsl2ja2ac65va7fyzwvh9nckjlqthv7qj9uv6zcagsr8500qun8a0v",
                   "value": {
                     "denom": "rowan",
                     "amount": "1000000000000000000000"
@@ -102,10 +102,10 @@
                   "type": "tendermint/PubKeySecp256k1",
                   "value": "A3DmgIq1k/Xbdqne9HZF1ff1BHl6jkT/iDKBjXr1y1Re"
                 },
-                "signature": "wwGCCYtkkFkveoWg3tA8OoWHYGGOCC1do9NFFPnevF9BOmsrNoOtW0zbvm2Xdxj5PTK7vKv099JyuiXQeGKvUg=="
+                "signature": "POwyAWpE5+qg0sS8AQHIwxv5r4y6leE18tk5FpLTwXxDJa9SquOFyKkENHJeh9YjSEtcNrvWcEhaumwgwiv5dg=="
               }
             ],
-            "memo": "23c121ceff5387546777d4327148fddaa126c67b@3.233.177.44:26656"
+            "memo": "ed7c9a538984d9eb3a86bc28a2b1d8928b7d0008@52.200.213.52:26656"
           }
         }
       ]
@@ -122,10 +122,10 @@
             "amount": "10000000"
           }
         ],
-        "max_deposit_period": "10800000000000"
+        "max_deposit_period": "900000000000"
       },
       "voting_params": {
-        "voting_period": "10800000000000"
+        "voting_period": "900000000000"
       },
       "tally_params": {
         "quorum": "0.334000000000000000",
