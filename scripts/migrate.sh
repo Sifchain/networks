@@ -16,6 +16,7 @@ usage() {
   -s      Cosmos SDK target version.
   -t      Genesis time (in UTC).
   -v      The new sifnoded binary version.
+  -w      The current sifnoded binary version.
   -z      Data migrate version.
 
 EOF
@@ -30,7 +31,8 @@ setup() {
   set_cosmos_sdk_version "${2}"
   set_genesis_time "${3}"
   set_version "${4}"
-  set_data_migrate_version "${5}"
+  set_current_version "${5}"
+  set_data_migrate_version "${6}"
   create_export_state_dir
 }
 
@@ -74,6 +76,13 @@ set_version() {
 }
 
 #
+# Set current version.
+#
+set_current_version() {
+  CURRENT_VERSION=${1}
+}
+
+#
 # Set data migrate version.
 #
 set_data_migrate_version() {
@@ -102,7 +111,7 @@ backup() {
 # Export state.
 #
 export_state() {
-  "${HOME}"/.sifnoded/cosmovisor/current/bin/sifnoded export > "${EXPORT_STATE_DIR}"/exported_state.json
+  "${HOME}"/.sifnoded/cosmovisor/upgrades/"${CURRENT_VERSION}"/bin/sifnoded export > "${EXPORT_STATE_DIR}"/exported_state.json
 }
 
 #
@@ -180,11 +189,11 @@ completed() {
 #
 run() {
   # Setup.
-  #printf "\nConfiguring environment for upgrade..."
-  setup "${1}" "${2}" "${3}" "${4}" "${5}"
+  printf "\nConfiguring environment for upgrade..."
+  setup "${1}" "${2}" "${3}" "${4}" "${5}" "${6}"
 
   # Backup.
-  #printf "\nTaking a backup..."
+  printf "\nTaking a backup..."
   backup
 
   # Check if already upgraded?
@@ -220,8 +229,8 @@ run() {
   update_config
 
   # Update symlink.
-  printf "\nUpdating the cosmovisor symlink..."
-  update_symlink
+  # printf "\nUpdating the cosmovisor symlink..."
+  # update_symlink
 
   # Complete.
   printf "\nUpgrade complete! Good luck!\n\n"
@@ -229,7 +238,7 @@ run() {
 }
 
 # Check the supplied opts.
-while getopts ":hc:s:t:v:z:" o; do
+while getopts ":hc:s:t:v:w:z:" o; do
   case "${o}" in
     h)
       usage
@@ -245,6 +254,9 @@ while getopts ":hc:s:t:v:z:" o; do
       ;;
     v)
       v=${OPTARG}
+      ;;
+    w)
+      w=${OPTARG}
       ;;
     z)
       z=${OPTARG}
@@ -272,9 +284,13 @@ if [ -z "${v}" ]; then
   usage
 fi
 
+if [ -z "${w}" ]; then
+  usage
+fi
+
 if [ -z "${z}" ]; then
   usage
 fi
 
 # Run.
-run "${c}" "${s}" "${t}" "${v}" "${z}"
+run "${c}" "${s}" "${t}" "${v}" "${w}" "${z}"
