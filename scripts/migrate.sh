@@ -186,7 +186,7 @@ update_config() {
 #
 update_initial_height() {
   TMP_GENESIS="${HOME}"/.sifnoded/config/.genesis.json
-  jq '.initial_height = "${INITIAL_HEIGHT}"' "${HOME}"/.sifnoded/config/genesis.json > "${TMP_GENESIS}" && mv "${TMP_GENESIS}" "${HOME}"/.sifnoded/config/genesis.json
+  jq --arg initial_height "${INITIAL_HEIGHT}" '.initial_height = $initial_height' "${HOME}"/.sifnoded/config/genesis.json > "${TMP_GENESIS}" && mv "${TMP_GENESIS}" "${HOME}"/.sifnoded/config/genesis.json
 }
 
 #
