@@ -12,6 +12,7 @@ usage() {
 
   Options:
   -h      This help output.
+  -b      Initial block height.
   -c      New Chain ID.
   -s      Cosmos SDK target version.
   -t      Genesis time (in UTC).
@@ -27,12 +28,13 @@ EOF
 # Setup
 #
 setup() {
-  set_chain_id "${1}"
-  set_cosmos_sdk_version "${2}"
-  set_genesis_time "${3}"
-  set_version "${4}"
-  set_current_version "${5}"
-  set_data_migrate_version "${6}"
+  set_initial_height "${1}"
+  set_chain_id "${2}"
+  set_cosmos_sdk_version "${3}"
+  set_genesis_time "${4}"
+  set_version "${5}"
+  set_current_version "${6}"
+  set_data_migrate_version "${7}"
   create_export_state_dir
 }
 
@@ -43,6 +45,13 @@ upgraded() {
   if [ -f "${HOME}"/.sifnoded/."${COSMOS_SDK_VERSION}"_upgraded ]; then
     exit 0
   fi
+}
+
+#
+# Set Initial block Height.
+#
+set_initial_height() {
+  INITIAL_HEIGHT=${1:-"1"}
 }
 
 #
@@ -173,6 +182,14 @@ update_config() {
 }
 
 #
+# Update initial block height.
+#
+update_initial_height() {
+  TMP_GENESIS="${HOME}"/.sifnoded/config/.genesis.json
+  jq '.initial_height = "${INITIAL_HEIGHT}"' "${HOME}"/.sifnoded/config/genesis.json > "${TMP_GENESIS}" && mv "${TMP_GENESIS}" "${HOME}"/.sifnoded/config/genesis.json
+}
+
+#
 # Update symlink
 #
 update_symlink() {
@@ -193,7 +210,7 @@ completed() {
 run() {
   # Setup.
   printf "\nConfiguring environment for upgrade..."
-  setup "${1}" "${2}" "${3}" "${4}" "${5}" "${6}"
+  setup "${1}" "${2}" "${3}" "${4}" "${5}" "${6}" "${7}"
 
   # Backup.
   printf "\nTaking a backup..."
@@ -231,6 +248,10 @@ run() {
   printf "\nUpdating the node config (api,grpc,state-sync)..."
   update_config
 
+  # Update the initial block height.
+  printf "\nUpdating the initial block height..."
+  update_initial_height
+
   # Update symlink.
   # printf "\nUpdating the cosmovisor symlink..."
   # update_symlink
@@ -241,10 +262,13 @@ run() {
 }
 
 # Check the supplied opts.
-while getopts ":hc:s:t:v:w:z:" o; do
+while getopts ":hb:c:s:t:v:w:z:" o; do
   case "${o}" in
     h)
       usage
+      ;;
+    b)
+      b=${OPTARG}
       ;;
     c)
       c=${OPTARG}
@@ -271,6 +295,10 @@ while getopts ":hc:s:t:v:w:z:" o; do
 done
 shift $((OPTIND-1))
 
+if [ -z "${b}" ]; then
+  usage
+fi
+
 if [ -z "${c}" ]; then
   usage
 fi
@@ -296,4 +324,4 @@ if [ -z "${z}" ]; then
 fi
 
 # Run.
-run "${c}" "${s}" "${t}" "${v}" "${w}" "${z}"
+run "${b}" "${c}" "${s}" "${t}" "${v}" "${w}" "${z}"
