@@ -253,8 +253,8 @@ run() {
   update_initial_height
 
   # Update symlink.
-  # printf "\nUpdating the cosmovisor symlink..."
-  # update_symlink
+  printf "\nUpdating the cosmovisor symlink..."
+  update_symlink
 
   # Complete.
   printf "\nUpgrade complete! Good luck!\n\n"
