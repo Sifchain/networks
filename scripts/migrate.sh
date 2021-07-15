@@ -273,7 +273,7 @@ run() {
 
   # Set the Oracle Admin Address.
   printf "\nSetting Oracle Admin Address..."
-  set_genesis_oracle_admin
+  #set_genesis_oracle_admin
 
   # Update symlink.
   printf "\nUpdating the cosmovisor symlink..."
