@@ -190,6 +190,25 @@ update_initial_height() {
 }
 
 #
+# Set Oracle Admin.
+#
+set_genesis_oracle_admin() {
+  case ${CHAIN_ID} in
+    *"devnet"*)
+      ACCOUNT="sif1mxv2xmhm9r25cdxpwp4n43fd98t8xz97mg6xyt"
+      ;;
+    *"testnet"*)
+      ACCOUNT="sif1hnehvypx7f4e9ddtkhtss5uksnp5sku2g7rerq"
+      ;;
+    *)
+      ACCOUNT="sif1wy22rv4w3l9vmw5cvdc6npg8t0vess0kpvga3j"
+      ;;
+  esac
+
+  "${HOME}"/.sifnoded/cosmovisor/upgrades/"${VERSION}"/bin/sifnoded set-genesis-oracle-admin "${ACCOUNT}"
+}
+
+#
 # Update symlink
 #
 update_symlink() {
@@ -251,6 +270,10 @@ run() {
   # Update the initial block height.
   printf "\nUpdating the initial block height..."
   update_initial_height
+
+  # Set the Oracle Admin Address.
+  printf "\nSetting Oracle Admin Address..."
+  set_genesis_oracle_admin
 
   # Update symlink.
   printf "\nUpdating the cosmovisor symlink..."
