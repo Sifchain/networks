@@ -175,7 +175,7 @@ update_config() {
   wget -O "${HOME}"/.sifnoded/config/app.toml https://raw.githubusercontent.com/Sifchain/networks/master/config/"${CHAIN_ID}"/app.toml
 
   # Fix the log level.
-  sed -ri 's/log_level.*/log_level = \"trace\"/g' "${HOME}"/.sifnoded/config/config.toml
+  sed -ri 's/log_level.*/log_level = \"info\"/g' "${HOME}"/.sifnoded/config/config.toml
 
   # Set the log format to JSON.
   sed -ri 's/log_format.*/log_format = \"json\"/g' "${HOME}"/.sifnoded/config/config.toml
