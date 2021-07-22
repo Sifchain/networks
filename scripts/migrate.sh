@@ -176,9 +176,6 @@ update_config() {
 
   # Fix the log level.
   sed -ri 's/log_level.*/log_level = \"info\"/g' "${HOME}"/.sifnoded/config/config.toml
-
-  # Set the log format to JSON.
-  sed -ri 's/log_format.*/log_format = \"json\"/g' "${HOME}"/.sifnoded/config/config.toml
 }
 
 #
