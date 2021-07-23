@@ -42,7 +42,7 @@ setup() {
 # Already upgraded?
 #
 upgraded() {
-  if [ -f "${HOME}"/.sifnoded/."${COSMOS_SDK_VERSION}"_upgraded ]; then
+  if [ -f "${HOME}"/.sifnoded/.upgraded ]; then
     exit 0
   fi
 }
@@ -217,7 +217,7 @@ update_symlink() {
 # Completed.
 #
 completed() {
-  touch "${HOME}"/.sifnoded/."${COSMOS_SDK_VERSION}"_upgraded
+  touch "${HOME}"/.sifnoded/.upgraded
 }
 
 #
@@ -237,7 +237,7 @@ run() {
   upgraded
 
   # Export state.
-  #printf "\nExporting the current state..."
+  printf "\nExporting the current state..."
   export_state
 
   # Migrate exported state.
@@ -270,7 +270,7 @@ run() {
 
   # Set the Oracle Admin Address.
   printf "\nSetting Oracle Admin Address..."
-  #set_genesis_oracle_admin
+  set_genesis_oracle_admin
 
   # Update symlink.
   printf "\nUpdating the cosmovisor symlink..."
