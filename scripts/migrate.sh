@@ -150,7 +150,7 @@ migrate_data() {
 # Configure IBC
 #
 configure_ibc() {
-  cat "${EXPORT_STATE_DIR}"/migrated_data.json | jq '.app_state |= . + {"ibc":{"client_genesis":{"clients":[],"clients_consensus":[],"create_localhost":false},"connection_genesis":{"connections":[],"client_connection_paths":[]},"channel_genesis":{"channels":[],"acknowledgements":[],"commitments":[],"receipts":[],"send_sequences":[],"recv_sequences":[],"ack_sequences":[]}},"transfer":{"port_id":"transfer","denom_traces":[],"params":{"send_enabled":true,"receive_enabled":true}},"capability":{"index":"1","owners":[]}}' > "${EXPORT_STATE_DIR}"/genesis_ibc.json
+  cat "${EXPORT_STATE_DIR}"/migrated_data.json | jq '.app_state |= . + {"ibc":{"client_genesis":{"clients":[],"clients_consensus":[],"create_localhost":false},"connection_genesis":{"connections":[],"client_connection_paths":[]},"channel_genesis":{"channels":[],"acknowledgements":[],"commitments":[],"receipts":[],"send_sequences":[],"recv_sequences":[],"ack_sequences":[]}},"transfer":{"port_id":"transfer","denom_traces":[],"params":{"send_enabled":false,"receive_enabled":false}},"capability":{"index":"1","owners":[]}}' > "${EXPORT_STATE_DIR}"/genesis_ibc.json
   mv "${EXPORT_STATE_DIR}"/genesis_ibc.json "${EXPORT_STATE_DIR}"/genesis.json
 }
 
