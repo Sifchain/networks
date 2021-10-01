@@ -1,0 +1,8 @@
+[statesync]
+  enable = false
+  rpc_servers = ""
+  trust_height = 0
+  trust_hash = ""
+  trust_period = "168h0m0s"
+  discovery_time = "15s"
+  temp_dir = ""
