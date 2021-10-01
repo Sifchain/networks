@@ -17,7 +17,7 @@ apply_patch() {
 # Run
 #
 run() {
-  if ! grep -q "[statesync]" "${CONFIG}"; then
+  if ! grep -q "\[statesync\]" "${CONFIG}"; then
     apply_patch
   else
     echo -e 'The [statesync] config block already exists. Exiting.'
