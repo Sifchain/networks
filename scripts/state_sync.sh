@@ -7,9 +7,9 @@ CONFIG="${HOME}"/.sifnoded/config/config.toml
 PATCH=https://raw.githubusercontent.com/Sifchain/networks/master/config/sifchain-1/state_sync.patch
 
 #
-# Download
+# Apply patch.
 #
-apply_update() {
+apply_patch() {
   wget -q -O - "${PATCH}" >> "${CONFIG}"
 }
 
