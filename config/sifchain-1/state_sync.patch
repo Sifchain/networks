@@ -1,3 +1,4 @@
+
 [statesync]
   enable = false
   rpc_servers = ""
@@ -6,3 +7,4 @@
   trust_period = "168h0m0s"
   discovery_time = "15s"
   temp_dir = ""
+
