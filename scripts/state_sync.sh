@@ -13,9 +13,18 @@ apply_patch() {
   wget -q -O - "${PATCH}" >> "${CONFIG}"
 }
 
-if ! grep -q "[statesync]" "${CONFIG}"; then
-  echo 'statesync already exists'
-  exit 0
-fi
+#
+# Run
+#
+run() {
+  if ! grep -q "[statesync]" "${CONFIG}"; then
+    apply_patch
+  else
+    echo -e 'The [statesync] config block already exists. Exiting.'
+    exit 0
+  fi
 
-apply_patch
+  echo -e 'Update complete.'
+}
+
+run
