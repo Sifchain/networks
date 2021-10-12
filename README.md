@@ -1,4 +1,4 @@
-# networks
+# Networks
 
 Sifchain network information.
 
