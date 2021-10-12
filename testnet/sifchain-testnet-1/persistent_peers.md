@@ -1,0 +1,10 @@
+# Persistent Peers
+
+Use the following persistent peers when connecting to `sifchain-testnet-1`.
+
+```
+b4caebe07ab25126e4e6053bf955833198f18ed0@54.216.30.38:26656
+b6f113a30e7019b034e8b31cd2541aebebaacb60@54.66.212.111:26656
+ffcc2fab592d512eca7f903fd494d85a93e19cfe@122.248.219.121:26656
+a2864737f01d3977211e2ea624dd348595dd4f73@3.222.8.87:26656
+```
