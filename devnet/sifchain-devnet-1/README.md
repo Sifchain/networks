@@ -6,8 +6,8 @@ The current Chain ID is `sifchain-devnet-1`.
 
 ## Additional Information
 
-* [Current Version](https://github.com/Sifchain/networks/tree/master/testnet/sifchain-devnet-1/version)
-* [Genesis](https://github.com/Sifchain/networks/tree/master/testnet/sifchain-devnet-1/genesis.json.gz)
+* [Current Version](https://github.com/Sifchain/networks/tree/master/devnet/sifchain-devnet-1/version)
+* [Genesis](https://github.com/Sifchain/networks/tree/master/devnet/sifchain-devnet-1/genesis.json.gz)
 
 ## Endpoints
 
