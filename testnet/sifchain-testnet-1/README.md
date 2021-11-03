@@ -18,3 +18,7 @@ The list of publicly available endpoints include:
 |----|-------|
 |RPC|https://rpc-testnet.sifchain.finance|
 |LCD/REST|https://api-testnet.sifchain.finance|
+
+A block explorer is also available at:
+
+https://blockexplorer-testnet.sifchain.finance
