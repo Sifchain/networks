@@ -18,6 +18,7 @@ The list of publicly available endpoints include:
 |Type|Address|
 |----|-------|
 |RPC|https://rpc.sifchain.finance|
+|RPC (Archive)|https://rpc-archive.sifchain.finance|
 |gRPC|https://grpc.sifchain.finance|
 |LCD/REST|https://api.sifchain.finance|
 
