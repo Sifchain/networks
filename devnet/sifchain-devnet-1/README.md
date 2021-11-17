@@ -1,4 +1,4 @@
-# TestNet
+# DevNet
 
 ## Overview
 
