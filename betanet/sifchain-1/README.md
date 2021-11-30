@@ -8,6 +8,7 @@ The current Chain ID is `sifchain-1`.
 
 * [Current Version](https://github.com/Sifchain/networks/tree/master/betanet/sifchain-1/version)
 * [Genesis](https://github.com/Sifchain/networks/tree/master/betanet/sifchain-1/genesis.json.gz)
+* [Seeds](https://github.com/Sifchain/networks/tree/master/betanet/sifchain-1/seeds.md) 
 * [Persistent Peers](https://github.com/Sifchain/networks/tree/master/betanet/sifchain-1/persistent_peers.md) 
 * [Snapshots](https://github.com/Sifchain/networks/tree/master/betanet/sifchain-1/snapshots.md)
 
