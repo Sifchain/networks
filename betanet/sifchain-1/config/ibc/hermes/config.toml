@@ -1,0 +1,411 @@
+#
+# Example config for hermes.
+#
+# Thanks to Cephalopod, Notional DAO and others for contributing to this.
+#
+# +-------------------------------------------------------------+
+# | Key               | Description                             |
+# +-------------------------------------------------------------+
+# | <rpc_addr>        | Node RPC address of the chain.          |
+# | <grpc_addr>       | Node gRPC address for the chain.        |
+# | <websocket_addr>  | Node websocket address for the chain.   |
+# | <key_name>        | Name of the key in the keyring.         |
+# +-------------------------------------------------------------+
+#
+#
+
+[global]
+log_level = 'debug'
+
+[mode]
+[mode.clients]
+enabled = true
+refresh = true
+misbehaviour = false
+
+[mode.connections]
+enabled = false
+
+[mode.channels]
+enabled = false
+
+[mode.packets]
+enabled = true
+clear_interval = 100
+clear_on_start = true
+filter = true
+tx_confirmation = false
+
+[rest]
+enabled = true
+host = '0.0.0.0'
+port = 3000
+
+#
+# Cosmoshub
+#
+[[chains]]
+id = 'cosmoshub-4'
+rpc_addr = '<rpc_addr>'
+grpc_addr = '<grpc_addr>'
+websocket_addr = '<websocket_addr>'
+rpc_timeout = '8s'
+account_prefix = 'cosmos'
+key_name = '<key_name>'
+store_prefix = 'ibc'
+memo_prefix = 'Connecting the Interchain by relaying for Sifchain.'
+gas_price = { price = 0.001, denom = 'uatom' }
+max_gas = 5000000
+max_msg_num = 15
+max_tx_size = 180000
+clock_drift = '7200s'
+trusting_period = '14days'
+trust_threshold = { numerator = '1', denominator = '3' }
+
+[chains.packet_filter]
+policy = 'allow'
+list = [['transfer', 'channel-192']]
+
+#
+# Akash
+#
+[[chains]]
+id = 'akashnet-2'
+rpc_addr = '<rpc_addr>'
+grpc_addr = '<grpc_addr>'
+websocket_addr = '<websocket_addr>'
+rpc_timeout = '8s'
+account_prefix = 'akash'
+key_name = '<key_name>'
+store_prefix = 'ibc'
+memo_prefix = 'Connecting the Interchain by relaying for Sifchain.'
+gas_price = { price = 0.001, denom = 'uakt' }
+max_gas = 2000000
+clock_drift = '7200s'
+trusting_period = '14days'
+trust_threshold = { numerator = '1', denominator = '3' }
+
+[chains.packet_filter]
+policy = 'allow'
+list = [['transfer', 'channel-24']]
+
+#
+# Sentinel
+#
+[[chains]]
+id = 'sentinelhub-2'
+rpc_addr = '<rpc_addr>'
+grpc_addr = '<grpc_addr>'
+websocket_addr = '<websocket_addr>'
+rpc_timeout = '8s'
+account_prefix = 'sent'
+key_name = '<key_name>'
+store_prefix = 'ibc'
+memo_prefix = 'Connecting the Interchain by relaying for Sifchain.'
+gas_price = { price = 0.01, denom = 'udvpn' }
+max_gas = 2000000
+max_msg_num = 15
+clock_drift = '7200s'
+trusting_period = '14days'
+trust_threshold = { numerator = '1', denominator = '3' }
+
+[chains.packet_filter]
+policy = 'allow'
+list = [['transfer', 'channel-36']]
+
+#
+# Crypto.org
+#
+[[chains]]
+id = 'crypto-org-chain-mainnet-1'
+rpc_addr = '<rpc_addr>'
+grpc_addr = '<grpc_addr>'
+websocket_addr = '<websocket_addr>'
+rpc_timeout = '8s'
+account_prefix = 'cro'
+key_name = '<key_name>'
+store_prefix = 'ibc'
+memo_prefix = 'Connecting the Interchain by relaying for Sifchain.'
+gas_price = { price = 0.1, denom = 'basecro' }
+max_gas = 2000000
+max_msg_num = 15
+max_tx_size = 450000
+clock_drift = '7200s'
+trusting_period = '14days'
+trust_threshold = { numerator = '1', denominator = '3' }
+
+[chains.packet_filter]
+policy = 'allow'
+list = [['transfer', 'channel-33']]
+
+#
+# Regen
+#
+[[chains]]
+id = 'regen-1'
+rpc_addr = '<rpc_addr>'
+grpc_addr = '<grpc_addr>'
+websocket_addr = '<websocket_addr>'
+rpc_timeout = '8s'
+account_prefix = 'regen'
+key_name = '<key_name>'
+store_prefix = 'ibc'
+memo_prefix = 'Connecting the Interchain by relaying for Sifchain.'
+gas_price = { price = 0.001, denom = 'uregen' }
+max_gas = 2000000
+max_msg_num = 15
+max_tx_size = 180000
+clock_drift = '7200s'
+trusting_period = '14days'
+trust_threshold = { numerator = '1', denominator = '3' }
+
+[chains.packet_filter]
+policy = 'allow'
+list = [['transfer', 'channel-28']]
+
+#
+# Persistence
+#
+[[chains]]
+id = 'core-1'
+rpc_addr = '<rpc_addr>'
+grpc_addr = '<grpc_addr>'
+websocket_addr = '<websocket_addr>'
+rpc_timeout = '8s'
+account_prefix = 'persistence'
+key_name = '<key_name>'
+store_prefix = 'ibc'
+memo_prefix = 'Connecting the Interchain by relaying for Sifchain.'
+gas_price = { price = 0.001, denom = 'uxprt' }
+max_gas = 1000000
+max_msg_num = 15
+max_tx_size = 180000
+clock_drift = '7200s'
+trusting_period = '14days'
+trust_threshold = { numerator = '1', denominator = '3' }
+
+[chains.packet_filter]
+policy = 'allow'
+list = [['transfer', 'channel-26']]
+
+#
+# IRIS
+#
+[[chains]]
+id = 'irishub-1'
+rpc_addr = '<rpc_addr>'
+grpc_addr = '<grpc_addr>'
+websocket_addr = '<websocket_addr>'
+rpc_timeout = '8s'
+account_prefix = 'iaa'
+key_name = '<key_name>'
+store_prefix = 'ibc'
+memo_prefix = 'Connecting the Interchain by relaying for Sifchain.'
+gas_price = { price = 0.01, denom = 'uiris' }
+max_gas = 2000000
+max_msg_num=15
+max_tx_size = 1800000
+clock_drift = '7200s'
+trusting_period = '14days'
+trust_threshold = { numerator = '1', denominator = '3' }
+
+[chains.packet_filter]
+policy = 'allow'
+list = [['transfer', 'channel-19']]
+
+#
+# IXO
+#
+[[chains]]
+id = 'impacthub-3'
+rpc_addr = '<rpc_addr>'
+grpc_addr = '<grpc_addr>'
+websocket_addr = '<websocket_addr>'
+rpc_timeout = '8s'
+account_prefix = 'ixo'
+key_name = '<key_name>'
+store_prefix = 'ibc'
+memo_prefix = 'Connecting the Interchain by relaying for Sifchain.'
+gas_price = { price = 0.01, denom = 'uixo' }
+max_gas = 1500000
+max_msg_num = 15
+max_tx_size = 180000
+clock_drift = '7200s'
+trusting_period = '14days'
+trust_threshold = { numerator = '1', denominator = '3' }
+
+[chains.packet_filter]
+policy = 'allow'
+list = [['transfer', 'channel-11']]
+
+#
+# Juno
+#
+[[chains]]
+id = 'juno-1'
+rpc_addr = '<rpc_addr>'
+grpc_addr = '<grpc_addr>'
+websocket_addr = '<websocket_addr>'
+rpc_timeout = '8s'
+account_prefix = 'juno'
+key_name = '<key_name>'
+store_prefix = 'ibc'
+memo_prefix = 'Connecting the Interchain by relaying for Sifchain.'
+gas_price = { price = 0.03, denom = 'ujuno' }
+max_gas = 1500000
+max_msg_num = 15
+max_tx_size = 450000
+clock_drift = '7200s'
+trusting_period = '14days'
+trust_threshold = { numerator = '1', denominator = '3' }
+
+[chains.packet_filter]
+policy = 'allow'
+list = [['transfer', 'channel-5']]
+
+#
+# Osmosis
+#
+[[chains]]
+id = 'osmosis-1'
+rpc_addr = '<rpc_addr>'
+grpc_addr = '<grpc_addr>'
+websocket_addr = '<websocket_addr>'
+rpc_timeout = '8s'
+account_prefix = 'osmo'
+key_name = '<key_name>'
+store_prefix = 'ibc'
+memo_prefix = 'Connecting the Interchain by relaying for Sifchain.'
+gas_price = { price = 0.001, denom = 'uosmo' }
+max_gas = 8000000
+max_msg_num = 15
+max_tx_size = 450000
+clock_drift = '7200s'
+trusting_period = '10days'
+trust_threshold = { numerator = '1', denominator = '3' }
+
+[chains.packet_filter]
+policy = 'allow'
+list = [['transfer', 'channel-47']]
+
+#
+# Secret
+#
+[[chains]]
+id = 'secret-4'
+rpc_addr = '<rpc_addr>'
+grpc_addr = '<grpc_addr>'
+websocket_addr = '<websocket_addr>'
+rpc_timeout = '20s'
+account_prefix = 'secret'
+key_name = '<key_name>'
+store_prefix = 'ibc'
+memo_prefix = 'Connecting the Interchain by relaying for Sifchain.'
+max_msg_num = 30
+max_tx_size = 2097152
+default_gas = 50000
+max_gas = 3000000
+gas_adjustment = 0.1
+gas_price = { price = 0.015, denom = 'uscrt' }
+clock_drift = '5s'
+max_block_time = '10s'
+trusting_period = '14days'
+trust_threshold = { numerator = '1', denominator = '3'}
+address_type = { derivation = 'cosmos' }
+
+[chains.packet_filter]
+policy = 'allow'
+list = [['transfer', 'channel-4']]
+
+#
+# Comdex
+#
+[[chains]]
+id = 'comdex-1'
+rpc_addr = '<rpc_addr>'
+grpc_addr = '<grpc_addr>'
+websocket_addr = '<websocket_addr>'
+rpc_timeout = '20s'
+account_prefix = 'comdex'
+key_name = '<key_name>'
+store_prefix = 'ibc'
+memo_prefix = 'Connecting the Interchain by relaying for Sifchain.'
+max_gas = 2000000
+gas_price = { price = 0.001, denom = 'ucmdx' }
+gas_adjustment = 0.1
+clock_drift = '15s'
+trusting_period = '14days'
+trust_threshold = { numerator = '1', denominator = '3' }
+
+[chains.packet_filter]
+policy = 'allow'
+list = [['transfer', 'channel-17']]
+
+#
+# Emoney
+#
+[[chains]]
+id = 'emoney-3'
+rpc_addr = '<rpc_addr>'
+grpc_addr = '<grpc_addr>'
+websocket_addr = '<websocket_addr>'
+rpc_timeout = '15s'
+account_prefix = 'emoney'
+key_name = '<key_name>'
+store_prefix = 'ibc'
+memo_prefix = 'Connecting the Interchain by relaying for Sifchain.'
+max_tx_size = 180000
+max_gas = 3000000
+max_msg_num = 30
+gas_price = { price = 0.1, denom = 'ungm' }
+gas_adjustment = 1
+clock_drift ='70s'
+trusting_period = '10days'
+trust_threshold = { numerator = '1', denominator = '3' }
+
+[chains.packet_filter]
+policy = 'allow'
+list = [['transfer', 'channel-14']]
+
+#
+# Sifchain
+#
+[[chains]]
+id = 'sifchain-1'
+rpc_addr = '<rpc_addr>'
+grpc_addr = '<grpc_addr>'
+websocket_addr = '<websocket_addr>'
+rpc_timeout = '8s'
+account_prefix = 'sif'
+key_name = '<key_name>'
+store_prefix = 'ibc'
+memo_prefix = 'Connecting the Interchain by relaying for Sifchain.'
+gas_price = { price = 100000000000, denom = 'rowan' }
+max_gas = 3000000
+max_msg_num = 15
+max_tx_size = 180000
+clock_drift = '7200s'
+trusting_period = '14days'
+trust_threshold = { numerator = '1', denominator = '3' }
+
+[chains.packet_filter]
+policy = 'allow'
+# cosmoshub, akash, crypto-org, iris, persistence, regen, sentinel, regen, osmosis, juno, ixo, secret, comdex, emoney, chihuahua, bitsong
+list = [
+    ['transfer', 'channel-0'],
+    ['transfer', 'channel-2'],
+    ['transfer', 'channel-9'],
+    ['transfer', 'channel-8'],
+    ['transfer', 'channel-7'],
+    ['transfer', 'channel-1'],
+    ['transfer', 'channel-10'],
+    ['transfer', 'channel-17'],
+    ['transfer', 'channel-13'],
+    ['transfer', 'channel-14'],
+    ['transfer', 'channel-15'],
+    ['transfer', 'channel-33'],
+    ['transfer', 'channel-34'],
+    ['transfer', 'channel-19'],
+    ['transfer', 'channel-35'],
+    ['transfer', 'channel-36']
+]
