@@ -4,15 +4,15 @@ This page is a list of Sifchain's Current IBC Connections/Channels/Clients for I
 
 | Network | Channel | Client | Connection | CP Network | CP Channel | CP Client | CP Connection
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| crypto-org-chain-mainnet-1 | channel-33 | Unk | connection-239 | sifchain-1 | channel-9 | UNK | connection-10 |
-| regen-1 | channel-28 | UNK | connection-60 | sifchain-1 | channel-10 | UNK | connection-13 |
-| core-1 | channel-26 | UNK | connection-32 | sifchain-1 | channel-7 | UNK | connection-8 |
-| irishub-1 | channel-19 | UNK | connection-30 | sifchain-1 | channel-8 | UNK | connection-9 |
-| cosmoshub-4 | channel-0 | UNK | connection-0 | sifchain-1 | channel-192 | UNK | connection-347 |
-| akashnet-2 | channel-2 | UNK | connection-2 | sifchain-1 | channel-24 | UNK | connection-36 |
-| sentinelhub-2 | channel-1 | UNK | connection-1 | sifchain-1 | channel-36 | UNK | connection-58 |
-| juno-1 | channel-5 | UNK | connection-8 | sifchain-1 | channel-14 | UNK | connection-17 |
-| imppacthub-3 | channel-11 | UNK | connection-25 | sifchain-1 | channel-15 | UNK | connection-18 |
+| crypto-org-chain-mainnet-1 | channel-33 | 07-tendermint-1103 | connection-239 | sifchain-1 | channel-9 | 07-tendermint-20 | connection-10 |
+| regen-1 | channel-28 | 07-tendermint-73 | connection-60 | sifchain-1 | channel-10 | 07-tendermint-31 | connection-13 |
+| core-1 | channel-26 | 07-tendermint-38 | connection-32 | sifchain-1 | channel-7 | 07-tendermint-18 | connection-8 |
+| irishub-1 | channel-19 | 07-tendermint-42 | connection-30 | sifchain-1 | channel-8 | 07-tendermint-19 | connection-9 |
+| cosmoshub-4 | channel-192 | 07-tendermint-395 | connection-347 | sifchain-1 | channel-0 | 07-tendermint-0 | connection-0 |
+| akashnet-2 | channel-24 | 07-tendermint-61 | connection-36 | sifchain-1 | channel-2 | 07-tendermint-11 | connection-2 |
+| sentinelhub-2 | channel-36 | 07-tendermint-84 | connection-58 | sifchain-1 | channel-1 | 07-tendermint-9 | connection-1 |
+| juno-1 | channel-5 | 07-tendermint-9 | connection-8 | sifchain-1 | channel-14 | 07-tendermint-37 | connection-17 |
+| imppacthub-3 | channel-11 | 07-tendermint-25 | connection-25 | sifchain-1 | channel-15 | 07-tendermint-39 | connection-18 |
 | osmosis-1 | channel-47 | UNK | connection-1159 | sifchain-1 | channel-17 | 07-tendermint-41 | connection-20 |
 | iov-mainnet-ibc | channel-18 | 07-tendermint-53 | connection-36 | sifchain-1 | channel-54 | 07-tendermint-107 | connection-68 |
 | columbus-5 | channel-7 | 07-tendermint-19 | connection-19 | sifchain-1 | channel-18 | 07-tendermint-42 | connection-21 |
